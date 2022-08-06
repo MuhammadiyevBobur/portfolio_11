@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     *{
+         box-sizing: border-box;
+     }
+
+     body{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 0;
+         min-height: 100vh;
+         display: flex;
+          justify-content: center;
+     }
+      .cont{
+        overflow: hidden;
+         box-shadow: 2px 2px 5px   rgba(0,0, 0, 0.315);
+         height: 530%;
+         width: 500px;
+
+      }
+
+      .imgg{
+          display: flex;
+          justify-content: center;
+
+          transition:transform 0.5s ease-in-out;
+          transform: translateX(2250px);
+      }
+      .buton{
+          border: none;
+          display: flex;
+          justify-content: space-between;
+      }
+
+      button{
+       border: none;
+       background-color: royalblue;
+       color: #ffffff;
+       cursor: pointer;
+       padding: 0.5rem;
+       width: 49.6%;
+      }
+      
+      button:hover{
+          opacity: 0.90;
+      }
+      button:focus{
+          outline: none;
+      }
+       
+
+      img{
+          object-fit: cover;
+          height: 500px;
+          width: 500px;
+      }
+
+    </style>
+</head>
+<body>
+
+   
+    <div class="cont" >
+        <div class="imgg"id="btn" >
+        <img src="1.jpg" alt="">
+        <img src="2.jpg" alt="">
+        <img src="3.jpg" alt="">
+        <img src="4.webp" alt="">
+        <img src="5.jpg" alt="">
+        <img src="6.jpg" alt="">
+        <!-- <img src="7.jpg" alt=""> -->
+        <img src="8.jpg" alt="">
+        <img src="9.jpg" alt="">
+        <img src="10.jpg" alt="">
+        <img src="11.jpg" alt="">
+    </div>
+    <div class="buton"></div>
+    <button id="left">prev</button> 
+    <button id="rgiht">Naxt</button>
+</div>
+
+
+<script>
+    const btn=document.getElementById('btn')
+    const leftBtn=document.getElementById('left')
+    const rgihtBtn=document.getElementById('rgiht')
+    const img=document.querySelectorAll('#btn img');
+
+    let btn=0;
+    function changeImege(){
+      btn.style.transform=' translateX($ {-idx * 1749}px)';
+      
+    }
+
+    rgihtBtn.addEventListener('click',function  changeImege(){
+        btn++;
+        changeImege()
+    });
+  
+
+
+
+</script>
+
+</body>  
+</html>
